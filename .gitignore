@@ -9,6 +9,9 @@
 # Whitelist all dot-things in `~`:
 !/.*
 
+# Ignore vim-swap files:
+.*.swp
+
 # Ignore cache dir:
 /.cache
 
