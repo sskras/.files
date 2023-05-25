@@ -2,3 +2,6 @@
 
 # Start from ignoring everything except for the already added files:
 /*
+
+# Whitelist subdirs in `~`:
+!*/
