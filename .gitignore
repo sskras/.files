@@ -6,6 +6,9 @@
 # Whitelist subdirs in `~`:
 !*/
 
+# Whitelist all dot-files in `~`:
+!/.*
+
 # Ignore cache dir:
 /.cache
 
