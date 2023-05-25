@@ -5,3 +5,6 @@
 
 # Whitelist subdirs in `~`:
 !*/
+
+# Ignore cache dir:
+/.cache
