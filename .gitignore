@@ -8,3 +8,6 @@
 
 # Ignore cache dir:
 /.cache
+
+# Ignore our special Git dir and its' copies:
+/.files.git*
