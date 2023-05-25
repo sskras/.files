@@ -17,3 +17,6 @@
 
 # Ignore our special Git dir and its' copies:
 /.files.git*
+
+# Ignore some backup copies:
+*.ORIG
