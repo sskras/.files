@@ -1,7 +1,14 @@
 # SPDX-FileCopyrightText: 2023 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 # SPDX-License-Identifier: BlueOak-1.0.0
 
-# Executed for login shells.
+# Executed for login sessions by Bourne/sh-compatible shells.
+#
+# Eg:
+# - `zsh` only reads it in sh/ksh-compat mode
+# - `csh` and `tcsh` ignores it
+#
+# Via: https://superuser.com/questions/187639/zsh-not-hitting-profile/187673#187673
+# Via: https://en.wikipedia.org/wiki/Unix_shell#Configuration_files
 
 # Via: https://github.com/saukrs/.dotfiles
 #
