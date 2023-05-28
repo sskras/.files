@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BlueOak-1.0.0
 
 echo
-echo "Executing ${BASH_SOURCE[0]}"
+echo "Executing `pwd`/.profile"
 
 # Executed for login sessions by Bourne/sh-compatible shells.
 
