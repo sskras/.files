@@ -13,3 +13,6 @@ echo "Executing `pwd`/.bashrc"
 
 # TODO: Import useful pieces below from all the collected versions like above.
 # Unified, cross-platform .bahrc:
+
+# TODO: Unify Bash prompt coloring between Ubuntu and MSYS2:
+# - on MSYS_NT-10.0-19044 3.4.6.x86_64 the Ubuntu .bashrc makes it black-n-white
