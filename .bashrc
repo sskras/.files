@@ -16,3 +16,8 @@ echo "Executing `pwd`/.bashrc"
 
 # TODO: Unify Bash prompt coloring between Ubuntu and MSYS2:
 # - on MSYS_NT-10.0-19044 3.4.6.x86_64 the Ubuntu .bashrc makes it black-n-white
+
+# Functions
+#
+# Load them from the separate file:
+[ -f "${HOME}/.bash_functions" ] && . "${HOME}/.bash_functions"
