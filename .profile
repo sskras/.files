@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2023 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 # SPDX-License-Identifier: BlueOak-1.0.0
 
-# Run for login shells.
+# Executed for login shells.
 
 # Via: https://github.com/saukrs/.dotfiles
 #
@@ -14,4 +14,8 @@
 # - http://meta.ath0.com/2007/10/23/cleaning-up-bash-customizations/
 # - https://shreevatsa.wordpress.com/2008/03/30/zshbash-startup-files-loading-order-bashrc-zshrc-etc/
 
+# TODO: Stop using the following version:
 . ".config/unlicensed/.profile.Ubuntu-20.04.2-LTS-(Focal-Fossa)"
+
+# TODO: Import useful pieces from all the collected versions below.
+# Unified, cross-platform .profile:
