@@ -4,3 +4,5 @@
 echo "Executing ${BASH_SOURCE[0]}"
 
 # User's aliases in one place.
+
+alias home='/usr/bin/git --git-dir=${HOME}/.files.git --work-tree=${HOME}'
