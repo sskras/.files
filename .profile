@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BlueOak-1.0.0
 
 # Executed for login sessions by Bourne/sh-compatible shells.
-#
+
 # Eg:
 # - `zsh` only reads it in sh/ksh-compat mode
 # - `csh` and `tcsh` ignores it
