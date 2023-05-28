@@ -29,3 +29,18 @@ echo "Executing `pwd`/.profile"
 
 # TODO: Import useful pieces from all the collected versions below.
 # Unified, cross-platform .profile:
+
+# TODO: If we want to load .bashrc from .profile for Bourne-like shells too, we will need:
+#
+# - to add POSIX-protection into .bashrc;
+# - to clean (eliminate?) this block in .profile:
+#
+# ---------------------------------------
+# # if running bash
+# if [ -n "$BASH_VERSION" ]; then
+#     # include .bashrc if it exists
+#     if [ -f "$HOME/.bashrc" ]; then
+#         . "$HOME/.bashrc"
+#     fi
+# fi
+# ---------------------------------------
