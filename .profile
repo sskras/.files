@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BlueOak-1.0.0
 
 #echo   # TODO: Would be nice to print this line only then logging in via SSH, but skip in the case of `--login`.
-echo "Executing `pwd`/.profile"
+echo "Executing ${HOME}/.profile" > /dev/stderr
 
 # Executed for login sessions by Bourne/sh-compatible shells.
 
