@@ -25,7 +25,7 @@ echo "Executing ${HOME}/.profile" > /dev/stderr
 # - https://shreevatsa.wordpress.com/2008/03/30/zshbash-startup-files-loading-order-bashrc-zshrc-etc/
 
 # TODO: Stop using the following version:
-. ".config/unlicensed/.profile.Ubuntu-20.04.2-LTS-(Focal-Fossa)"
+. "${HOME}/.config/unlicensed/.profile.Ubuntu-20.04.2-LTS-(Focal-Fossa)"
 
 # TODO: Import useful pieces from all the collected versions below.
 # Unified, cross-platform .profile:
