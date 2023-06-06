@@ -9,6 +9,5 @@ log()
 {
     SESSION="$*"
 
-    echo "Logging session: $*"
     script --timing="$SESSION.timing" "$SESSION.script"
 }
