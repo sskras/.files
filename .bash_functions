@@ -11,6 +11,12 @@ log()
 
     if [ ! -f "$SESSION.script" ]; then
         script --timing="$SESSION.timing" "$SESSION.script" || \
+        # TODO report `script` bug:
+        #
+        # script: cannot open a/b: No such file or directory
+        # exit code: 0
+        #
+        # `script` returns 0 after failure.
         printf "\n! ERROR !    Capture failed, the output might be damaged\n" > /dev/stderr
     else
         printf "\n! ERROR !    Script \"$SESSION.script\" exists already\n" > /dev/stderr
