@@ -18,6 +18,17 @@ log()
         #
         # `script` returns 0 after failure.
         printf "\n! ERROR !    Capture failed, the output might be damaged\n" > /dev/stderr
+
+        # TODO report `script` bug #2:
+        #
+        # Script started, file is sveiki gyvi.script
+        # sskras@server-5aef8ee:/run/lock$ id
+        # uid=1001(sskras) gid=1001(sskras) groups=1001(sskras)
+        # sskras@server-5aef8ee:/run/lock$ exit
+        # Script done, file is sveiki gyvi.script
+        # script: write failed: sveiki gyvi.timing: No space left on device
+        #
+        # `script` indicates of no space too late, on exit.
     else
         printf "\n! ERROR !    Script \"$SESSION.script\" exists already\n" > /dev/stderr
         return 1
