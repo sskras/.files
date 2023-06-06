@@ -9,5 +9,10 @@ log()
 {
     SESSION="$*"
 
+    if [ ! -f "$SESSION.script" ]; then
     script --timing="$SESSION.timing" "$SESSION.script"
+    else
+        printf "\n! ERROR !    Script \"$SESSION.script\" exists already\n" > /dev/stderr
+        return 1
+    fi
 }
