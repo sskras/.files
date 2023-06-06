@@ -9,6 +9,7 @@ log()
 {
     SESSION="$*"
     SESSION="${SESSION// /-}"
+    SESSION="${SESSION//[%?\/\\:*]/_}"
 
     if [ ! -f "$SESSION.script" ]; then
         script --timing="$SESSION.timing" "$SESSION.script" || \
