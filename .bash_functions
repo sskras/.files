@@ -4,3 +4,8 @@
 echo "Executing ${HOME}/.bash_functions" > /dev/stderr
 
 # User's Bash functions in one place.
+
+log()
+{
+    echo "Logging session: $*"
+}
