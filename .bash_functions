@@ -8,6 +8,7 @@ echo "Executing ${HOME}/.bash_functions" > /dev/stderr
 log()
 {
     SESSION="$*"
+    SESSION="${SESSION// /-}"
 
     if [ ! -f "$SESSION.script" ]; then
         script --timing="$SESSION.timing" "$SESSION.script" || \
