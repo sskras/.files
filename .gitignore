@@ -4,13 +4,13 @@
 # Via: https://stackoverflow.com/questions/6011521/opposite-of-gitignore-file/6011532#6011532
 
 # Start from ignoring everything except for the already added files:
-/*
+##/*
 
 # Whitelist subdirs in `~`:
-!*/
+##!*/
 
 # Whitelist all dot-things in `~`:
-!/.*
+##!/.*
 
 # Ignore vim-swap files:
 .*.swp
