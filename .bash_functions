@@ -7,6 +7,8 @@ echo "Executing ${HOME}/.bash_functions" > /dev/stderr
 
 log()
 {
+    SESSION="$*"
+
     echo "Logging session: $*"
-    script --timing="$*.timing" "$*.script"
+    script --timing="$SESSION.timing" "$SESSION.script"
 }
