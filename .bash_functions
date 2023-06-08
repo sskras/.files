@@ -8,6 +8,13 @@ echo "Executing ${HOME}/.bash_functions" > /dev/stderr
 log()
 {
     SESSION="$( echo $* | sed -e 's/ /-/g' -e 's/[%?/\:*]/_/g' )"
+    # TODO:
+    # - add fns like `mkbuf`, `rmbuf` into `.shrc` or `.bashr`;
+    # - refactor path transformation into two readable lines:
+    #     mkbuf BUFF
+    #     echo $* | sed ... > $BUFF
+    #     read SESSIOS < $BUFF
+    # - add cleanup via `trap` or maybe just at EOF.
 
     if [ ! -f "$SESSION.script" ]; then
         script --timing="$SESSION.timing" "$SESSION.script" || \
