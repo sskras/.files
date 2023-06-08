@@ -7,9 +7,7 @@ echo "Executing ${HOME}/.bash_functions" > /dev/stderr
 
 log()
 {
-    SESSION="$*"
-    SESSION="${SESSION// /-}"
-    SESSION="${SESSION//[%?\/\\:*]/_}"
+    SESSION="$( echo $* | sed -e 's/ /-/g' -e 's/[%?/\:*]/_/g' )"
 
     if [ ! -f "$SESSION.script" ]; then
         script --timing="$SESSION.timing" "$SESSION.script" || \
