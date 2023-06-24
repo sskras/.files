@@ -1,5 +1,5 @@
-# SPDX-FileCopyrightText: 2023 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 # SPDX-License-Identifier: BlueOak-1.0.0
+# SPDX-FileCopyrightText: 2023 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
 #echo   # TODO: Would be nice to print this line only then logging in via SSH, but skip in the case of `--login`.
 echo "Executing ${HOME}/.profile" > /dev/stderr
