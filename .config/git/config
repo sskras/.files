@@ -4,4 +4,4 @@
 # Custom per-user (so-called global) Git configuration
 
 [credential]
-        helper = store
+    helper = store
