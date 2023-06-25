@@ -29,3 +29,7 @@
 /.lesshst
 /.viminfo
 /.config/git/credentials
+/.ssh/*
+
+# Whitelist my public SSH keys:
+!/.ssh/*.pub
