@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: BlueOak-1.0.0
 # SPDX-FileCopyrightText: 2023 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
-echo "Executing ${HOME}/.bash_functions" > /dev/stderr
+echo "Executing ${HOME}/.bash_functions" >&2
 
 # User's Bash functions in one place.
 
@@ -24,7 +24,7 @@ log()
         # exit code: 0
         #
         # `script` returns 0 after failure.
-        printf "\n! ERROR !    Capture failed, the output might be damaged\n" > /dev/stderr
+        printf "\n! ERROR !    Capture failed, the output might be damaged\n" >&2
 
         # TODO report `script` bug #2:
         #
@@ -37,7 +37,7 @@ log()
         #
         # `script` indicates of no space too late, on exit.
     else
-        printf "\n! ERROR !    Script \"$SESSION.script\" exists already\n" > /dev/stderr
+        printf "\n! ERROR !    Script \"$SESSION.script\" exists already\n" >&2
         return 1
     fi
 }
