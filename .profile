@@ -24,6 +24,11 @@ echo "Executing ${HOME}/.profile" > /dev/stderr
 # - http://meta.ath0.com/2007/10/23/cleaning-up-bash-customizations/
 # - https://shreevatsa.wordpress.com/2008/03/30/zshbash-startup-files-loading-order-bashrc-zshrc-etc/
 
+# TODO: Should the `.shrc` or `.shinit` become needed:
+#ENV=/home/sskras/.shrc
+#ENV=/home/sskras/.shinit
+#export ENV
+
 # TODO: Stop using the following version:
 . "${HOME}/.config/unlicensed/.profile.Ubuntu-20.04.2-LTS-(Focal-Fossa)"
 
