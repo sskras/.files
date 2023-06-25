@@ -3,5 +3,9 @@
 
 # Custom per-user (so-called global) Git configuration
 
+[user]
+    name = Saulius Krasuckas
+    email = saulius2@ar-fi.lt
+
 [credential]
     helper = store
