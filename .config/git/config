@@ -8,4 +8,5 @@
     email = saulius2@ar-fi.lt
 
 [credential]
+    username = sskras
     helper = store
