@@ -23,3 +23,9 @@
 
 # Ignore some backup copies:
 *.ORIG
+
+# Ignore files potentially coming from the secret TODO repo:
+/.bash_history
+/.lesshst
+/.viminfo
+/.config/git/credentials
