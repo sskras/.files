@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: BlueOak-1.0.0
 # SPDX-FileCopyrightText: 2023 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
-echo "Executing ${HOME}/.shrc" 1>&2
+echo "Executing ${HOME}/.shrc" >&2
 
 # Executed for Bourne/sh-compatible sessions.
