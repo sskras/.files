@@ -5,3 +5,6 @@ A = This Makefile present some milestone operations from lifecycle / during mana
 
 all:
 	@echo ${A}
+
+desc:
+	@echo ${A}
