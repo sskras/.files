@@ -5,8 +5,13 @@ echo "Executing ${HOME}/.bash_functions" >&2
 
 # User's Bash functions in one place.
 
+DIR_SESSIONS="${HOME}/debug/session-logs"
+
+
 log()
 {
+    pushd "${DIR_SESSIONS}" || return 1
+
     SESSION="$( date +%Y-%m-%d-%H%M )__$( echo $* | sed -e 's/ /-/g' -e 's/[%?/\:*]/_/g' )"
     # TODO:
     # - add fns like `mkbuf`, `rmbuf` into `.shrc` or `.bashr`;
@@ -40,4 +45,6 @@ log()
         printf "\n! ERROR !    Script \"$SESSION.script\" exists already\n" >&2
         return 1
     fi
+
+    popd
 }
