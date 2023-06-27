@@ -7,7 +7,7 @@ echo "Executing ${HOME}/.bash_functions" >&2
 
 log()
 {
-    SESSION="$( echo $* | sed -e 's/ /-/g' -e 's/[%?/\:*]/_/g' )"
+    SESSION="$( date +%Y-%m-%d-%H%M )__$( echo $* | sed -e 's/ /-/g' -e 's/[%?/\:*]/_/g' )"
     # TODO:
     # - add fns like `mkbuf`, `rmbuf` into `.shrc` or `.bashr`;
     # - refactor path transformation into two readable lines:
