@@ -32,6 +32,8 @@ all:
 	          print $$1     # Print target name \
 	      }                                     \
 	'                                           \
+	#| sort                                                          \
+	#| grep -E -v '^[^[:alnum:]]'                                    \
 
 desc:
 	@echo ${A}
