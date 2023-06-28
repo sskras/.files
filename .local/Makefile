@@ -29,6 +29,7 @@ all:
 	                                            \
 	      GO && ! /^(#|\.|$@:)/                 \
 	      {                                     \
+	          printf "    " # Indent            \
 	          print $$1     # Print target name \
 	      }                                     \
 	'                                           \
