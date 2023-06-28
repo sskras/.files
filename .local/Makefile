@@ -5,6 +5,10 @@ A = This Makefile present some milestone operations from lifecycle / during mana
 
 all:
 	@echo ${A}
+	@echo
+	@echo "Available targets:"
+	@# Via: https://stackoverflow.com/questions/4219255/how-do-you-get-the-list-of-targets-in-a-makefile/26340367#26340367
+	@$(MAKE) -pRrqn -f $(firstword $(MAKEFILE_LIST)) : 2> /dev/null \
 
 desc:
 	@echo ${A}
