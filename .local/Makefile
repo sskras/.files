@@ -84,3 +84,6 @@ get:
 	echo 'TODO: make push # Bandomasis'                          && \
 	exit                                                            \
 
+pop:
+	git --git-dir=${HOME}/.files.git --work-tree=${HOME} checkout && \
+	exit                                                            \
