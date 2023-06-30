@@ -63,6 +63,9 @@ push:
 	# mv -v .git-credentials .config/git/credentials
 
 get:
+	@
+
+clone:
 	@ \
 	cd $${HOME}                                                  && \
 	:                                                            && \
