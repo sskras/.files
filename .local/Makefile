@@ -56,3 +56,7 @@ init:
 	git branch -M main                                           && \
 	git remote add origin git@github.com:sskras/.files.git       && \
 	exit
+
+push:
+	git push -u origin main
+	# mv -v .git-credentials .config/git/credentials
