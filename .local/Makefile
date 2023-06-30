@@ -39,3 +39,19 @@ all:
 
 desc:
 	@echo ${A}
+
+init:
+	@ \
+	GIT_DIR=$${HOME}/.files.git                                  && \
+	GIT_WORK_TREE=$${HOME}                                       && \
+	cd $${HOME}                                                  && \
+	set -x                                                       && \
+	export GIT_DIR                                               && \
+	git init --bare                                              && \
+	git config user.name "Saulius Krasuckas"                     && \
+	git config user.email "saulius2@ar-fi.lt"                    && \
+	export GIT_WORK_TREE                                         && \
+	git commit -m 'Repository just created' --allow-empty        && \
+	git branch -M main                                           && \
+	git remote add origin git@github.com:sskras/.files.git       && \
+	exit
