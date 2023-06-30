@@ -55,8 +55,16 @@ init:
 	git commit -m 'Repository just created' --allow-empty        && \
 	git branch -M main                                           && \
 	git remote add origin git@github.com:sskras/.files.git       && \
-	exit
+	exit                                                            \
 
 push:
 	git push -u origin main
 	# mv -v .git-credentials .config/git/credentials
+
+get:
+	@ \
+	cd $${HOME}                                                  && \
+	: For the token based auth:                                  && \
+	git clone --bare https://github.com/sskras/.files            && \
+	exit                                                            \
+
