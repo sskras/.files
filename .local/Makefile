@@ -59,6 +59,7 @@ init:
 
 push:
 	git push -u origin main
+	: TODO: Make Git credentials storage to conform to XDG dir spec
 	# mv -v .git-credentials .config/git/credentials
 
 get:
@@ -80,7 +81,7 @@ get:
 	echo 'TODO: git config user.email ...'                       && \
 	echo 'TODO: ... or maybe it will get imported from global (per-user) Git settings to be stored on this repo.' && \
 	echo 'TODO: => git@github.com:sskras/.files.git'             && \
-	echo 'TODO: https://stackoverflow.com/questions/37770467/why-do-i-have-to-git-push-set-upstream-origin-branch' \
+	echo 'TODO: https://stackoverflow.com/questions/37770467/why-do-i-have-to-git-push-set-upstream-origin-branch' && \
 	echo 'TODO: make push # Bandomasis'                          && \
 	exit                                                            \
 
