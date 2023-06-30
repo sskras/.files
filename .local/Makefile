@@ -62,7 +62,7 @@ push:
 	: TODO: Make Git credentials storage to conform to XDG dir spec
 	# mv -v .git-credentials .config/git/credentials
 
-get:
+get: clone pop
 	@
 
 clone:
