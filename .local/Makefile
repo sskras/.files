@@ -47,6 +47,7 @@ init:
 	cd $${HOME}                                                  && \
 	set -x                                                       && \
 	export GIT_DIR                                               && \
+	: TODO: Check if $$GIT_DIR is already present.               && \
 	git init --bare                                              && \
 	git config user.name "Saulius Krasuckas"                     && \
 	git config user.email "saulius2@ar-fi.lt"                    && \
