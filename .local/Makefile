@@ -85,5 +85,9 @@ get:
 	exit                                                            \
 
 pop:
+	GIT_WORK_TREE=$${HOME}                                       && \
+	GIT_DIR=$${GIT_WORK_TREE}/.files.git                         && \
+	export GIT_WORK_TREE                                         && \
+	export GIT_DIR                                               && \
 	git --git-dir=${HOME}/.files.git --work-tree=${HOME} checkout && \
 	exit                                                            \
