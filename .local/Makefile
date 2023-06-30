@@ -64,7 +64,23 @@ push:
 get:
 	@ \
 	cd $${HOME}                                                  && \
+	:                                                            && \
 	: For the token based auth:                                  && \
+	:                                                            && \
 	git clone --bare https://github.com/sskras/.files            && \
+	:                                                            && \
+	: For the SSH-keys based auth:                               && \
+	:                                                            && \
+	echo                                                         && \
+	: eval `ssh-agent -s`                                        && \
+	: TODO: Use SSH key forwarding, if possible:                 && \
+	: ssh-add ~/.ssh/id_rsa-saukrs                               && \
+	echo 'TODO: SSH raktu setupas'                               && \
+	echo 'TODO: git config user.name ...'                        && \
+	echo 'TODO: git config user.email ...'                       && \
+	echo 'TODO: ... or maybe it will get imported from global (per-user) Git settings to be stored on this repo.' && \
+	echo 'TODO: => git@github.com:sskras/.files.git'             && \
+	echo 'TODO: https://stackoverflow.com/questions/37770467/why-do-i-have-to-git-push-set-upstream-origin-branch' \
+	echo 'TODO: make push # Bandomasis'                          && \
 	exit                                                            \
 
