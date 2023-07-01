@@ -96,10 +96,12 @@ pop:
 	@ \
 	echo                                                         && \
 	cd $${GIT_WORK_TREE}                                         && \
+	: Create a dir for storing copies of conflicting files:      && \
+	mkdir -pv .config/unlicensed                                 && \
 	git ls-tree --full-tree --name-only -r HEAD                     \
 	| while read FILE; do                                           \
 	      if [ -f "$${FILE}" ] || [ -L "$${FILE}" ]; then           \
-	          rm -v "$${FILE}";                                     \
+	          mv -v "$${FILE}" .config/unlicensed/;                 \
 	      else                                                      \
 	          true;                                                 \
 	      fi                                                        \
