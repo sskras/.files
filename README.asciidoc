@@ -2,3 +2,13 @@
 // SPDX-FileCopyrightText: 2023 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
 = Various public files residing in my `$HOME`
+
+== Bootstrapping the environment to manage home-dir
+
+Use one of the following commands:
+
+```sh
+$ curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- get
+$ curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/bin/boot-home | sh
+$ curl -L t.co/I1FBEJfNtu | sh
+```
