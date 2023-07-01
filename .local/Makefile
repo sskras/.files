@@ -6,6 +6,7 @@ A = This Makefile present some milestone operations from lifecycle / during mana
 # Concat with a subdir to work in a sandbox:
 GIT_WORK_TREE   := ${HOME}#/tmp
 GIT_DIR         := ${GIT_WORK_TREE}/.files.git
+CONFLICT_STORE  := .config/unlicensed
 
 # Via: https://stackoverflow.com/questions/23843106/how-to-set-child-process-environment-variable-in-makefile/49524393#49524393
 export  GIT_WORK_TREE
@@ -97,11 +98,11 @@ pop:
 	echo                                                         && \
 	cd $${GIT_WORK_TREE}                                         && \
 	: Create a dir for storing copies of conflicting files:      && \
-	mkdir -pv .config/unlicensed                                 && \
+	mkdir -pv ${CONFLICT_STORE}                                  && \
 	git ls-tree --full-tree --name-only -r HEAD                     \
 	| while read FILE; do                                           \
 	      if [ -f "$${FILE}" ] || [ -L "$${FILE}" ]; then           \
-	          mv -v "$${FILE}" .config/unlicensed/;                 \
+	          mv -v "$${FILE}" ${CONFLICT_STORE}/;                  \
 	      else                                                      \
 	          true;                                                 \
 	      fi                                                        \
