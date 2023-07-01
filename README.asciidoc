@@ -16,3 +16,4 @@ curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/bin/boot-hom
 ```sh
 curl -L t.co/I1FBEJfNtu | sh
 ```
+(I used internal link shortener of Twitter to get the latter URL)
