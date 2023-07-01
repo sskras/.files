@@ -17,3 +17,8 @@ curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/bin/boot-hom
 curl -L t.co/I1FBEJfNtu | sh
 ```
 (I used internal link shortener of Twitter to get the latter URL)
+
+One may want to relogin for the environment to take effect.
+
+Alternatively, one may just run `exec bash` to lose the current shell session at its' state,
+and get a new session with the environment set up _modus_ effect of `.profile`.
