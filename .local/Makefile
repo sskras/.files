@@ -94,6 +94,7 @@ clone:
 
 pop:
 	@ \
+	echo                                                         && \
 	cd $${GIT_WORK_TREE}                                         && \
 	git ls-tree --full-tree --name-only -r HEAD                     \
 	| while read FILE; do                                           \
