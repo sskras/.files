@@ -102,7 +102,12 @@ pop:
 	git ls-tree --full-tree --name-only -r HEAD                     \
 	| while read FILE; do                                           \
 	      if [ -f "$${FILE}" ] || [ -L "$${FILE}" ]; then           \
-	          mv -v "$${FILE}" ${CONFLICT_STORE}/;                  \
+	          rsync                                                 \
+	              -aR                                               \
+	              --remove-source-files                             \
+	              --itemize-changes                                 \
+	              "$${FILE}" ${CONFLICT_STORE}                      \
+	          ;                                                     \
 	      else                                                      \
 	          true;                                                 \
 	      fi                                                        \
