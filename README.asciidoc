@@ -8,11 +8,11 @@
 Use one of the following commands:
 
 ```sh
-$ curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- get
+curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- get
 ```
 ```sh
-$ curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/bin/boot-home | sh
+curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/bin/boot-home | sh
 ```
 ```sh
-$ curl -L t.co/I1FBEJfNtu | sh
+curl -L t.co/I1FBEJfNtu | sh
 ```
