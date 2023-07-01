@@ -4,7 +4,7 @@
 A = This Makefile present some milestone operations from lifecycle / during management of the dot-files repository.
 
 # Concat with a subdir to work in a sandbox:
-GIT_WORK_TREE   := ${HOME} #/tmp
+GIT_WORK_TREE   := ${HOME}#/tmp
 GIT_DIR         := ${GIT_WORK_TREE}/.files.git
 
 # Via: https://stackoverflow.com/questions/23843106/how-to-set-child-process-environment-variable-in-makefile/49524393#49524393
