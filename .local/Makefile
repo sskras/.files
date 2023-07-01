@@ -63,7 +63,9 @@ init:
 	exit                                                            \
 
 push:
-	git push -u origin main
+	@ \
+	echo "Pushing for the first time & caching creds/the token." && \
+	git push -u origin main                                      && \
 	cd $${GIT_WORK_TREE}                                         && \
 	mv -v .git-credentials .config/git/credentials               && \
 	exit                                                            \
