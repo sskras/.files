@@ -64,8 +64,9 @@ init:
 
 push:
 	git push -u origin main
-	: TODO: Make Git credentials storage to conform to XDG dir spec
-	# mv -v .git-credentials .config/git/credentials
+	cd $${GIT_WORK_TREE}                                         && \
+	mv -v .git-credentials .config/git/credentials               && \
+	exit                                                            \
 
 get: clone pop
 	@
