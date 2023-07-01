@@ -94,6 +94,11 @@ clone:
 
 pop:
 	@ \
+	cd $${GIT_WORK_TREE}                                         && \
+	git ls-tree --full-tree --name-only -r HEAD                     \
+	| while read FILE; do                                           \
+	      [ -f "$${FILE}" ] && rm -v "$${FILE}" || true;            \
+	  done                                                       && \
 	git checkout                                                 && \
 	exit                                                            \
 
