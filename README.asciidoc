@@ -23,4 +23,4 @@ I used Twitter's internal link shortener to get the latter URL.
 After deployment is over, you may want to relogin for the environment to take effect.
 
 Alternatively, just run `exec bash` to lose the current shell session at its' state,
-and get a new session with the environment set up _modus_ effect of `.profile`.
+and get a new session with the environment set up _modus_ the effect of `.profile`.
