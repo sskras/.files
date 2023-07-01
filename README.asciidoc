@@ -16,7 +16,9 @@ curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/bin/boot-hom
 ```sh
 curl -L t.co/I1FBEJfNtu | sh
 ```
-^I used Twitter's internal link shortener to get the latter URL^
++++ <sup> +++
+I used Twitter's internal link shortener to get the latter URL.
++++ </sup> +++
 
 One may want to relogin for the environment to take effect.
 
