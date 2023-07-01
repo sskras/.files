@@ -3,7 +3,8 @@
 
 A = This Makefile present some milestone operations from lifecycle / during management of the dot-files repository.
 
-GIT_WORK_TREE   := ${HOME}
+# Concat with a subdir to work in a sandbox:
+GIT_WORK_TREE   := ${HOME} #/tmp
 GIT_DIR         := ${GIT_WORK_TREE}/.files.git
 
 # Via: https://stackoverflow.com/questions/23843106/how-to-set-child-process-environment-variable-in-makefile/49524393#49524393
@@ -49,7 +50,7 @@ desc:
 
 init:
 	@ \
-	cd $${HOME}                                                  && \
+	cd $${GIT_WORK_TREE}                                         && \
 	set -x                                                       && \
 	: TODO: Check if $$GIT_DIR is already present.               && \
 	git init --bare                                              && \
@@ -70,7 +71,7 @@ get: clone pop
 
 clone:
 	@ \
-	cd $${HOME}                                                  && \
+	cd $${GIT_WORK_TREE}                                         && \
 	:                                                            && \
 	: For the token based auth:                                  && \
 	:                                                            && \
