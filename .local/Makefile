@@ -98,7 +98,7 @@ pop:
 	cd $${GIT_WORK_TREE}                                         && \
 	git ls-tree --full-tree --name-only -r HEAD                     \
 	| while read FILE; do                                           \
-	      if find "$${FILE}" > /dev/null 2>&1; then                 \
+	      if [ -f "$${FILE}" ] || [ -L "$${FILE}" ]; then           \
 	          rm -v "$${FILE}";                                     \
 	      else                                                      \
 	          true;                                                 \
