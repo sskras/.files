@@ -62,7 +62,7 @@ init:
 	git remote add origin git@github.com:sskras/.files.git       && \
 	exit                                                            \
 
-push:
+init-push:
 	@ \
 	echo "Pushing for the first time & caching creds/the token." && \
 	git push -u origin main                                      && \
@@ -70,7 +70,7 @@ push:
 	mv -v .git-credentials .config/git/credentials               && \
 	exit                                                            \
 
-get: clone pop
+get: clone pop init-push
 	@
 
 clone:
