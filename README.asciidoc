@@ -20,7 +20,7 @@ curl -L t.co/I1FBEJfNtu | sh
 I used Twitter's internal link shortener to get the latter URL.
 +++ </sup> +++
 
-One may want to relogin for the environment to take effect.
+After deployment is over, you may want to relogin for the environment to take effect.
 
-Alternatively, one may just run `exec bash` to lose the current shell session at its' state,
+Alternatively, just run `exec bash` to lose the current shell session at its' state,
 and get a new session with the environment set up _modus_ effect of `.profile`.
