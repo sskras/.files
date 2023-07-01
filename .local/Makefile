@@ -3,6 +3,13 @@
 
 A = This Makefile present some milestone operations from lifecycle / during management of the dot-files repository.
 
+GIT_WORK_TREE   := ${HOME}
+GIT_DIR         := ${GIT_WORK_TREE}/.files.git
+
+# Via: https://stackoverflow.com/questions/23843106/how-to-set-child-process-environment-variable-in-makefile/49524393#49524393
+export  GIT_WORK_TREE
+export  GIT_DIR
+
 all:
 	@echo ${A}
 	@echo
@@ -42,16 +49,12 @@ desc:
 
 init:
 	@ \
-	GIT_DIR=$${HOME}/.files.git                                  && \
-	GIT_WORK_TREE=$${HOME}                                       && \
 	cd $${HOME}                                                  && \
 	set -x                                                       && \
-	export GIT_DIR                                               && \
 	: TODO: Check if $$GIT_DIR is already present.               && \
 	git init --bare                                              && \
 	git config user.name "Saulius Krasuckas"                     && \
 	git config user.email "saulius2@ar-fi.lt"                    && \
-	export GIT_WORK_TREE                                         && \
 	git commit -m 'Repository just created' --allow-empty        && \
 	git branch -M main                                           && \
 	git remote add origin git@github.com:sskras/.files.git       && \
@@ -90,10 +93,6 @@ clone:
 
 pop:
 	@ \
-	GIT_WORK_TREE=$${HOME}                                       && \
-	GIT_DIR=$${GIT_WORK_TREE}/.files.git                         && \
-	export GIT_WORK_TREE                                         && \
-	export GIT_DIR                                               && \
 	git checkout                                                 && \
 	exit                                                            \
 
