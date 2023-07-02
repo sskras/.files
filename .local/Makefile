@@ -115,6 +115,7 @@ pop:
 	              --relative                                        \
 	              --remove-source-files                             \
 	              --itemize-changes                                 \
+	              --info=name                                       \
 	              "$${FILE}" "${CONFLICT_STORE}/${CONFLICT_OSDIR}/" \
 	          ;                                                     \
 	      else                                                      \
