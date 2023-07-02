@@ -130,5 +130,6 @@ uninstall:
 	git ls-tree --full-tree --name-only -r HEAD                     \
 	| xargs rm -v                                                && \
 	rm -v .config/git/credentials                                && \
+	rm -rf ${GIT_DIR}                                            && \
 	exit                                                            \
 
