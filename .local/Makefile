@@ -7,6 +7,9 @@ A = This Makefile present some milestone operations from lifecycle / during mana
 GIT_WORK_TREE   := ${HOME}#/tmp
 GIT_DIR         := ${GIT_WORK_TREE}/.files.git
 CONFLICT_STORE  := .config/unlicensed
+CONFLICT_OSDIR  := `uname -o | sed 's|/|-|'`-`uname -r`
+              # Eg:
+              #  - GNU-Linux-5.4.0
 
 # Via: https://stackoverflow.com/questions/23843106/how-to-set-child-process-environment-variable-in-makefile/49524393#49524393
 export  GIT_WORK_TREE
@@ -100,7 +103,8 @@ pop:
 	@ \
 	echo                                                         && \
 	cd $${GIT_WORK_TREE}                                         && \
-	: Create a dir for storing copies of conflicting files:      && \
+	: Create a dir for storing copies of conflicting files       && \
+	: because it has not been checked out from the repo yet:     && \
 	mkdir -pv ${CONFLICT_STORE}                                  && \
 	git ls-tree --full-tree --name-only -r HEAD                     \
 	| while read FILE; do                                           \
@@ -109,7 +113,7 @@ pop:
 	              -aR                                               \
 	              --remove-source-files                             \
 	              --itemize-changes                                 \
-	              "$${FILE}" ${CONFLICT_STORE}                      \
+	              "$${FILE}" ${CONFLICT_STORE}/${CONFLICT_OSDIR}/   \
 	          ;                                                     \
 	      else                                                      \
 	          true;                                                 \
