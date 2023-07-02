@@ -123,3 +123,8 @@ pop:
 	git checkout                                                 && \
 	exit                                                            \
 
+uninstall:
+	@ \
+	echo "Uninstalling the repo files:"                          && \
+	exit                                                            \
+
