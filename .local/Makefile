@@ -111,7 +111,8 @@ pop:
 	| while read FILE; do                                           \
 	      if [ -f "$${FILE}" ] || [ -L "$${FILE}" ]; then           \
 	          rsync                                                 \
-	              -aR                                               \
+	              --archive                                         \
+	              --relative                                        \
 	              --remove-source-files                             \
 	              --itemize-changes                                 \
 	              "$${FILE}" "${CONFLICT_STORE}/${CONFLICT_OSDIR}/" \
