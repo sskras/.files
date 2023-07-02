@@ -7,9 +7,10 @@ A = This Makefile present some milestone operations from lifecycle / during mana
 GIT_WORK_TREE   := ${HOME}#/tmp
 GIT_DIR         := ${GIT_WORK_TREE}/.files.git
 CONFLICT_STORE  := .config/unlicensed
-CONFLICT_OSDIR  := `uname -o | sed 's|/|-|'`-`uname -r`
+CONFLICT_OSDIR  := `uname -o | sed 's|/|-|'`-`uname -r | sed 's|/|-|g'`
               # Eg:
               #  - GNU-Linux-5.4.0
+              #  - Cygwin-3.3.3(0.341-5-3)
 
 # Via: https://stackoverflow.com/questions/23843106/how-to-set-child-process-environment-variable-in-makefile/49524393#49524393
 export  GIT_WORK_TREE
