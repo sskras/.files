@@ -74,7 +74,7 @@ init-push:
 	mv -v .git-credentials .config/git/credentials               && \
 	exit                                                            \
 
-get: clone pop init-push
+install: clone pop init-push
 	@
 
 clone:
