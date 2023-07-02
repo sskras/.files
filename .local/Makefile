@@ -126,5 +126,8 @@ pop:
 uninstall:
 	@ \
 	echo "Uninstalling the repo files:"                          && \
+	cd $${GIT_WORK_TREE}                                         && \
+	git ls-tree --full-tree --name-only -r HEAD                     \
+	| xargs rm -v                                                && \
 	exit                                                            \
 
