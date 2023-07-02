@@ -113,7 +113,7 @@ pop:
 	              -aR                                               \
 	              --remove-source-files                             \
 	              --itemize-changes                                 \
-	              "$${FILE}" ${CONFLICT_STORE}/${CONFLICT_OSDIR}/   \
+	              "$${FILE}" "${CONFLICT_STORE}/${CONFLICT_OSDIR}/" \
 	          ;                                                     \
 	      else                                                      \
 	          true;                                                 \
