@@ -125,12 +125,13 @@ pop:
 
 uninstall:
 	@ \
-	echo "Uninstalling the repo files:"                          && \
+	git push --all                                               && \
 	cd $${GIT_WORK_TREE}                                         && \
 	echo                                                         && \
 	echo "TODO: See the original files to restore if any:"       && \
 	git status | grep \.config/unlicensed/                       && \
 	echo                                                         && \
+	echo "Uninstalling the repo files:"                          && \
 	git ls-tree --full-tree --name-only -r HEAD                     \
 	| xargs rm -v                                                && \
 	rm -v .config/git/credentials                                && \
