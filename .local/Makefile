@@ -129,5 +129,6 @@ uninstall:
 	cd $${GIT_WORK_TREE}                                         && \
 	git ls-tree --full-tree --name-only -r HEAD                     \
 	| xargs rm -v                                                && \
+	rm -v .config/git/credentials                                && \
 	exit                                                            \
 
