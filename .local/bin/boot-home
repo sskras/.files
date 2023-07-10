@@ -5,6 +5,9 @@
 
 # Bootstrap tools & shell environment to manage home-dir and its' dot-files.
 
+# 0, Fail early:
+set -e
+
 # 1, Deploy the repo, checkout the files:
 curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
 
