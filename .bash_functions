@@ -54,4 +54,5 @@ gi ()
 {
     # TODO: clone git into appropriate subdir tree
     # Eg. https://github.com/NetBSD/pkgsrc => ./github.com/NetBSD/pkgsrc
+    [ "$1" = "clone" ] || return 1
 }
