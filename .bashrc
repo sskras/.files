@@ -46,3 +46,6 @@ echo "Executing ${HOME}/.bashrc" >&2
 #
 # Load them from the separate file:
 [ -f "${HOME}/.bash_functions" ] && . "${HOME}/.bash_functions"
+
+PATH=${PATH}:${HOME}/pkg/bin            # Unprivileged pkgsrc
+PATH=${PATH}:${HOME}/pkg/sbin           # --"--
