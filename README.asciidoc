@@ -18,7 +18,7 @@ Shortened URL alternatives:
 
 - &nbsp;
 +++ <sub> +++
-Twitter's link shortener:
+Via Twitter:
 +++ </sub> +++
 ```sh
 curl -L t.co/IrpGHxCGXi | make -f- get
@@ -26,6 +26,19 @@ curl -L t.co/IrpGHxCGXi | make -f- get
 ```sh
 curl -L t.co/I1FBEJfNtu | sh
 ```
+
+- &nbsp;
++++ <sub> +++
+Via inbox.LV:
++++ </sub> +++
+```sh
+curl -L inx.lv/mi3N | make -f- get
+```
+```sh
+curl -L inx.lv/mi3u | sh
+```
+
+&nbsp;
 
 After deployment is over, you may want to relogin for the environment to take effect.
 
