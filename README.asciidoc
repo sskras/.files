@@ -13,6 +13,12 @@ curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | m
 ```sh
 curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/bin/boot-home | sh
 ```
+
+\... shortened URL alternatives:
+
+```sh
+curl -L t.co/IrpGHxCGXi | make -f- get
+```
 ```sh
 curl -L t.co/I1FBEJfNtu | sh
 ```
