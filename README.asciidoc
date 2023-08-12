@@ -14,17 +14,18 @@ curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | m
 curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/bin/boot-home | sh
 ```
 
-\... shortened URL alternatives:
+Shortened URL alternatives:
 
+- &nbsp;
++++ <sub> +++
+Twitter's link shortener:
++++ </sub> +++
 ```sh
 curl -L t.co/IrpGHxCGXi | make -f- get
 ```
 ```sh
 curl -L t.co/I1FBEJfNtu | sh
 ```
-+++ <sup> +++
-I used Twitter's internal link shortener to get the latter URL.
-+++ </sup> +++
 
 After deployment is over, you may want to relogin for the environment to take effect.
 
