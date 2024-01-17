@@ -29,6 +29,11 @@ echo "Executing ${HOME}/.profile" >&2
 #ENV=/home/sskras/.shinit
 #export ENV
 
+# NOTE: It's hardly possible to execute a startup file for non-interactive `sh` sessions:
+# https://unix.stackexchange.com/questions/590788/treatment-of-env-and-bash-env-in-bash-running-in-bash-and-sh-mode/590794#590794
+# https://askubuntu.com/questions/879364/differentiate-interactive-login-and-non-interactive-non-login-shell/879400#879400
+# (as opposed to the effect of BASH_ENV, see URLs above)
+
 # TODO: Stop using the following version:
 . "${HOME}/.config/unlicensed/.profile.Ubuntu-20.04.2-LTS-(Focal-Fossa)"
 
