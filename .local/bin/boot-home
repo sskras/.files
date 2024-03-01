@@ -10,6 +10,3 @@ set -e
 
 # 1, Deploy the repo, checkout the files:
 curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
-
-# 2, Create a dir to store terminal session logs:
-mkdir -pv ${HOME}/debug/session-logs
