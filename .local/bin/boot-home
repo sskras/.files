@@ -13,8 +13,8 @@ software () {
 # 0, Fail early:
 set -e
 
-# 1, Deploy the repo, checkout the files:
-curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
-
-# 2, Install crucial software:
+# 1, Install crucial software:
 software install make git
+
+# 2, Deploy the repo, checkout the files:
+curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
