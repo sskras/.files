@@ -7,7 +7,7 @@
 
 software () {
     # On Debian:
-    apt "$@"
+    apt -y "$@"
 }
 
 # 0, Fail early:
