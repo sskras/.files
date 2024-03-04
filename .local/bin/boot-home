@@ -5,16 +5,12 @@
 
 # Bootstrap tools & shell environment to manage home-dir and its' dot-files.
 
-software () {
-    # On Debian:
-    apt -y "$@"
-}
-
 # 0, Fail early:
 set -e
 
-# 1, Install crucial software:
-software install make git
+# 1, TODO: Detect if some tools are missing, e.g. git, make.
+# In case they are, run the right script as root, e.g:
+# https://github.com/saukrs/linux-tools/blob/4a7ea6000866123a41178465b1204e478a2c3820/steps--1-bootstrap#L9-L18
 
 # 2, Deploy the repo, checkout the files:
 curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
