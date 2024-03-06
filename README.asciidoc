@@ -8,7 +8,7 @@
 Use one of the following commands:
 
 ```sh
-curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- get
+curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
 ```
 ```sh
 curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/bin/boot-home | sh
@@ -21,7 +21,7 @@ Shortened URL alternatives:
 Via Twitter:
 +++ </sub> +++
 ```sh
-curl -L t.co/IrpGHxCGXi | make -f- get
+curl -L t.co/IrpGHxCGXi | make -f- install
 ```
 ```sh
 curl -L t.co/I1FBEJfNtu | sh
@@ -32,7 +32,7 @@ curl -L t.co/I1FBEJfNtu | sh
 Via inbox.LV:
 +++ </sub> +++
 ```sh
-curl -L inx.lv/mi3N | make -f- get
+curl -L inx.lv/mi3N | make -f- install
 ```
 ```sh
 curl -L inx.lv/mi3u | sh
