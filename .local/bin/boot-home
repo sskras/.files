@@ -14,21 +14,18 @@ set -e
 
 main () {
 
-# 1, Detect if some tools are missing, e.g. git, make.
+    # 1, Detect if some tools are missing, e.g. git, make.
+    for CMD in ${DEPS}; do
+        if ! command -v ${CMD} >/dev/null; then
+            MISSING="${MISSING} ${CMD}"
+            RET=$((RET + 1))
+        fi
+    done
 
-for CMD in ${DEPS}; do
-    if ! command -v ${CMD} >/dev/null; then
-        MISSING="${MISSING} ${CMD}"
-        RET=$((RET + 1))
-    fi
-done
+    [ -n "${MISSING}" ] && error
 
-if [ -n "${MISSING}" ]; then
-    error
-fi
-
-# 2, Deploy the repo, checkout the files:
-curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
+    # 2, Deploy the repo, checkout the files:
+    curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
 }
 
 error () {
