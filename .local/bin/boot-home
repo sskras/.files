@@ -5,22 +5,21 @@
 
 # Bootstrap tools & shell environment to manage home-dir and its' dot-files.
 
+DEPS="git make"
+
 # 0, Fail early:
 set -e
 
 # 1, Detect if some tools are missing, e.g. git, make.
-DEPS="git make"
 
 for CMD in ${DEPS}; do
-    if ! command -v ${CMD} >/dev/null
-    then
+    if ! command -v ${CMD} >/dev/null; then
         MISSING="${MISSING} ${CMD}"
         RET=$((RET + 1))
     fi
 done
 
-if [ -n "${MISSING}" ]
-then
+if [ -n "${MISSING}" ]; then
     # In case they are, ask user to install them:
     echo "Missing:${MISSING}"
     # Maybe suggest running the right script as root, e.g:
