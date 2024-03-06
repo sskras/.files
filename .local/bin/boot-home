@@ -21,9 +21,31 @@ done
 
 if [ -n "${MISSING}" ]; then
     # In case they are, ask user to install them:
-    echo "Missing:${MISSING}"
     # Maybe suggest running the right script as root, e.g:
-    # https://github.com/saukrs/linux-tools/blob/4a7ea6000866123a41178465b1204e478a2c3820/steps--1-bootstrap#L9-L18
+    # https://github.com/saukrs/linux-tools/tree/main?tab=readme-ov-file#bootstrap-the-os-setup
+    cat <<- \
+	-------------------------------------------------------------------------------------------
+	Needed executables are missing:
+
+	 ${MISSING}
+
+	Please install them before retrying, eg:
+
+	  apt install -y git make
+
+	Or by using a generic script:
+
+	  cd /tmp
+	  curl -O https://raw.githubusercontent.com/saukrs/linux-tools/main/steps--1-bootstrap
+	  cat steps--1-bootstrap
+	  su -c sh steps--1-bootstrap
+	  rm -v steps--1-bootstrap
+	  cd -
+
+	Or simply run:
+
+	  su -c 'curl -L t.co/a4GqgzcBUz | sh'
+	-------------------------------------------------------------------------------------------
     exit $RET
 fi
 
