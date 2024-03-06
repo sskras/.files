@@ -9,10 +9,10 @@ DEPS="git make"
 
 # Protect the script from truncating in transit:
 
-main () {
-
 # 0, Fail early:
 set -e
+
+main () {
 
 # 1, Detect if some tools are missing, e.g. git, make.
 
