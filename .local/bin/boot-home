@@ -9,6 +9,22 @@
 set -e
 
 # 1, TODO: Detect if some tools are missing, e.g. git, make.
+DEPS="git make"
+
+for CMD in ${DEPS}; do
+    if ! command -v ${CMD} >/dev/null
+    then
+        MISSING="${MISSING} ${CMD}"
+        RET=$((RET + 1))
+    fi
+done
+
+if [ -n "${MISSING}" ]
+then
+    echo "Missing:${MISSING}"
+    exit $RET
+fi
+
 # In case they are, run the right script as root, e.g:
 # https://github.com/saukrs/linux-tools/blob/4a7ea6000866123a41178465b1204e478a2c3820/steps--1-bootstrap#L9-L18
 
