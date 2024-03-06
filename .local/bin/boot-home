@@ -7,6 +7,10 @@
 
 DEPS="git make"
 
+# Protect the script from truncating in transit:
+
+main () {
+
 # 0, Fail early:
 set -e
 
@@ -51,3 +55,6 @@ fi
 
 # 2, Deploy the repo, checkout the files:
 curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
+}
+
+main
