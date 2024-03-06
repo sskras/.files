@@ -24,6 +24,14 @@ for CMD in ${DEPS}; do
 done
 
 if [ -n "${MISSING}" ]; then
+    error
+fi
+
+# 2, Deploy the repo, checkout the files:
+curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
+}
+
+error () {
     # In case they are, ask user to install them:
     # Maybe suggest running the right script as root, e.g:
     # https://github.com/saukrs/linux-tools/tree/main?tab=readme-ov-file#bootstrap-the-os-setup
@@ -37,7 +45,7 @@ if [ -n "${MISSING}" ]; then
 
 	  apt install -y git make
 
-	Or by using a generic script:
+	Or use a dedicated script:
 
 	  cd /tmp
 	  curl -O https://raw.githubusercontent.com/saukrs/linux-tools/main/steps--1-bootstrap
@@ -46,15 +54,11 @@ if [ -n "${MISSING}" ]; then
 	  rm -v steps--1-bootstrap
 	  cd -
 
-	Or simply run:
+	Or simply run a shortened command:
 
 	  su -c 'curl -L t.co/a4GqgzcBUz | sh'
 	-------------------------------------------------------------------------------------------
     exit $RET
-fi
-
-# 2, Deploy the repo, checkout the files:
-curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
 }
 
 main
