@@ -5,7 +5,7 @@
 
 # Bootstrap tools & shell environment to manage home-dir and its' dot-files.
 
-DEPS="git make"
+DEPS="git make rsync"
 
 # Protect the script from truncating in transit:
 
