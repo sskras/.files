@@ -47,15 +47,15 @@ error () {
 	Or use a dedicated script:
 
 	  cd /tmp
-	  curl -O https://raw.githubusercontent.com/saukrs/linux-tools/main/steps--1-bootstrap
-	  cat steps--1-bootstrap
-	  su -c sh steps--1-bootstrap
-	  rm -v steps--1-bootstrap
+	  curl -O https://raw.githubusercontent.com/saukrs/linux-tools/main/steps-01-bootstrap
+	  cat steps-01-bootstrap
+	  su -c sh steps-01-bootstrap
+	  rm -v steps-01-bootstrap
 	  cd -
 
 	Or simply run a shortened command:
 
-	  su -c 'curl -L t.co/a4GqgzcBUz | sh'
+	  su -c 'curl -L t.co/kEdmHSC4ZK | sh'
 	-------------------------------------------------------------------------------------------
     exit $RET
 }
