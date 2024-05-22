@@ -37,3 +37,7 @@ $0~TRIGGER \
 
 GO
     # Just print everything
+
+# TODO:
+# - Make trimming optional.
+# - Make capitalization optional.
