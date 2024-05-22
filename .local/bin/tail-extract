@@ -5,4 +5,17 @@
 
 # Extract the expected part of text from stdin.
 
-BEGIN {TRIGGER="After deployment is over, y"} $0~TRIGGER { GO=1; print ""; sub(TRIGGER, "Y") } GO
+BEGIN \
+{
+    TRIGGER="After deployment is over, y"
+}
+
+$0~TRIGGER \
+{
+    GO=1
+    print ""
+    sub(TRIGGER, "Y")
+}
+
+GO
+    # Just print everything
