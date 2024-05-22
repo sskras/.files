@@ -28,7 +28,7 @@ main () {
     curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
 
     cd
-    cat README.asciidoc | awk 'BEGIN {TRIGGER="After deployment is over, y"} $0~TRIGGER { GO=1; print ""; sub(TRIGGER, "Y") } GO'
+    cat README.asciidoc | tail-extract
 }
 
 error () {

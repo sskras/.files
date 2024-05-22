@@ -4,3 +4,5 @@
 # SPDX-FileCopyrightText: 2024 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
 
 # Extract the expected part of text from stdin.
+
+BEGIN {TRIGGER="After deployment is over, y"} $0~TRIGGER { GO=1; print ""; sub(TRIGGER, "Y") } GO
