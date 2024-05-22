@@ -32,7 +32,7 @@ main () {
 }
 
 error () {
-    # In case they are, ask user to install them:
+    # In case the deps are missing, ask user to install them.
     # Maybe suggest running the right script as root, e.g:
     # https://github.com/saukrs/linux-tools/tree/main?tab=readme-ov-file#bootstrap-the-os-setup
     cat <<- \
