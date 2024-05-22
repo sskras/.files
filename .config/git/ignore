@@ -33,3 +33,7 @@
 
 # Whitelist my public SSH keys:
 !/.ssh/*.pub
+
+# Ignore debug files and Downloads, at least for a while:
+/debug
+/Downloads
