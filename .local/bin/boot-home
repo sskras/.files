@@ -28,7 +28,7 @@ main () {
     curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
 
     cd
-    cat README.asciidoc | tail-extract "After deployment is over, y"
+    cat README.asciidoc | .local/bin/tail-extract "After deployment is over, y"
 }
 
 error () {
