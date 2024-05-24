@@ -141,6 +141,7 @@ uninstall:
 	echo "Uninstalling the repo files:"                          && \
 	git ls-tree --full-tree --name-only -r HEAD                     \
 	| xargs rm -v                                                && \
+	rm -v .config/git/credentials                                && \
 	echo                                                         && \
 	echo "TODO: Remove the leftover empty dirs..."               && \
 	echo                                                         && \
@@ -149,7 +150,6 @@ uninstall:
 	| sort -u                                                       \
 	| xargs ls -l                                                && \
 	echo                                                         && \
-	rm -v .config/git/credentials                                && \
 	rm -rf ${GIT_DIR}                                            && \
 	exit                                                            \
 
