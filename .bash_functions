@@ -20,7 +20,7 @@ home()  # Fn to manage home directory
             make -C "${HOME}/.local" uninstall
             ;;
         (*)
-    /usr/bin/git --git-dir=${HOME}/.files.git --work-tree=${HOME} "$@"
+            /usr/bin/git --git-dir=${HOME}/.files.git --work-tree=${HOME} "$@"
             ;;
     esac
     # Via: https://www.atlassian.com/git/tutorials/dotfiles#installing-git-lfs
