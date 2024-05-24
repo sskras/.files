@@ -26,6 +26,8 @@ main () {
 
     # 2, Deploy the repo, checkout the files:
     curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
+    # TODO: Convert `.local/Makefile` into Bash functions, so we have one depedency less.
+    # TODO: Maybe just use the current script.
 
     cd
     cat README.asciidoc | .local/bin/tail-extract "After deployment is over, "
