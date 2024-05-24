@@ -127,6 +127,11 @@ pop:
 
 uninstall:
 	@ \
+	echo                                                         && \
+	echo TODO: git pull might be needed if upstream was updated. && \
+	echo TODO: Maybe move the current state to a backup branch.  && \
+	echo                                                         && \
+	:                                                            && \
 	git push --all                                               && \
 	cd $${GIT_WORK_TREE}                                         && \
 	echo                                                         && \
