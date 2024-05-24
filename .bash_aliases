@@ -5,5 +5,4 @@ echo "Executing ${HOME}/.bash_aliases" >&2
 
 # User's aliases in one place.
 
-# Via: https://www.atlassian.com/git/tutorials/dotfiles#installing-git-lfs
-alias home='/usr/bin/git --git-dir=${HOME}/.files.git --work-tree=${HOME}'
+#.

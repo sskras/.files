@@ -8,6 +8,12 @@ echo "Executing ${HOME}/.bash_functions" >&2
 DIR_SESSIONS="${HOME}/debug/session-logs"
 
 
+home()  # Fn to manage home directory
+{
+    /usr/bin/git --git-dir=${HOME}/.files.git --work-tree=${HOME} "$@"
+    # Via: https://www.atlassian.com/git/tutorials/dotfiles#installing-git-lfs
+}
+
 log()
 {
     pushd "${DIR_SESSIONS}" || return 1
