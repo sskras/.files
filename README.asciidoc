@@ -42,5 +42,5 @@ curl -L inx.lv/mi3u | sh
 
 After deployment is over, you may want to relogin for the environment to take effect.
 
-Alternatively, just run `exec bash -l` to lose the current shell session (Eg. jobs)
+Alternatively, just run `exec "${SHELL}" -l` to lose the current shell session (Eg. jobs)
 modus shell history and get the versioned shell environment set up.
