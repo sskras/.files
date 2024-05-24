@@ -141,6 +141,13 @@ uninstall:
 	echo "Uninstalling the repo files:"                          && \
 	git ls-tree --full-tree --name-only -r HEAD                     \
 	| xargs rm -v                                                && \
+	echo                                                         && \
+	echo "TODO: Remove the leftover empty dirs..."               && \
+	echo                                                         && \
+	git ls-tree --full-tree --name-only -r HEAD                     \
+	| awk 'BEGIN {OFS=FS="/"} $$0~FS {$$NF=""; print}'              \
+	| sort -u                                                       \
+	| xargs ls -l                                                && \
 	rm -v .config/git/credentials                                && \
 	rm -rf ${GIT_DIR}                                            && \
 	exit                                                            \
