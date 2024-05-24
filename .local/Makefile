@@ -148,6 +148,7 @@ uninstall:
 	| awk 'BEGIN {OFS=FS="/"} $$0~FS {$$NF=""; print}'              \
 	| sort -u                                                       \
 	| xargs ls -l                                                && \
+	echo                                                         && \
 	rm -v .config/git/credentials                                && \
 	rm -rf ${GIT_DIR}                                            && \
 	exit                                                            \
