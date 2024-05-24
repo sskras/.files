@@ -10,7 +10,19 @@ DIR_SESSIONS="${HOME}/debug/session-logs"
 
 home()  # Fn to manage home directory
 {
+    case "$1" in
+        (uninstall)
+            echo "Going to uninstall tracked dot-files (and the whole repo)."
+            echo
+            echo "If you want to cancel, issuing Ctrl-C is advised."
+            echo "To proceed just press Enter."
+            read
+            make -C "${HOME}/.local" uninstall
+            ;;
+        (*)
     /usr/bin/git --git-dir=${HOME}/.files.git --work-tree=${HOME} "$@"
+            ;;
+    esac
     # Via: https://www.atlassian.com/git/tutorials/dotfiles#installing-git-lfs
 }
 
