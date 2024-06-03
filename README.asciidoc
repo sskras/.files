@@ -44,3 +44,10 @@ After deployment is over, you may want to relogin for the environment to take ef
 
 Alternatively, just run `exec "${SHELL}" -l` to lose the current shell session (Eg. jobs)
 modus shell history and get the versioned shell environment set up.
+
+== TODOs
+
+- pull on login?
+- push on logout?
+  - Via https://unix.stackexchange.com/questions/436959/how-can-i-get-a-confirmation-before-exiting-screen/437700#437700[How can I get a confirmation before exiting screen?]
+- .
