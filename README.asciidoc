@@ -49,5 +49,5 @@ modus shell history and get the versioned shell environment set up.
 
 * pull on login?
 * push on logout?
-  - Via https://unix.stackexchange.com/questions/436959/how-can-i-get-a-confirmation-before-exiting-screen/437700#437700[How can I get a confirmation before exiting screen?]
+ ** Via https://unix.stackexchange.com/questions/436959/how-can-i-get-a-confirmation-before-exiting-screen/437700#437700[How can I get a confirmation before exiting screen?]
 * .
