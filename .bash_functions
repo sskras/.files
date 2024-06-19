@@ -76,7 +76,12 @@ gi ()  # Clones git repo into an appropriate subdir tree
     GIT_URL="$1"
     SUBDIR="${GIT_URL/https:\/\//}"
 
-    mkdir -pv "${SUBDIR}"
-    cd "${SUBDIR}"
+    mcd "${SUBDIR}"
     git clone "${GIT_URL}" .
+}
+
+mcd ()  # Fn to make a directory & cd to it
+{
+    mkdir -pv "$1"
+    cd "$1"
 }
