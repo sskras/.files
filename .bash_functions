@@ -10,6 +10,7 @@ DIR_SESSIONS="${HOME}/debug/session-logs"
 
 home()  # Fn to manage home directory
 {
+    cd
     case "$1" in
         (uninstall)
             echo "Going to uninstall tracked dot-files (and the whole repo)."
