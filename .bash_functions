@@ -71,9 +71,9 @@ log()
 gi ()  # Clones git repo into an appropriate subdir tree
        # Eg: https://github.com/NetBSD/pkgsrc.git => ./github.com/NetBSD/pkgsrc.git
 {
-    [ "$1" = "clone" ] || return 1
+    #[ "$1" = "clone" ] || return 1
 
-    GIT_URL="$2"
+    GIT_URL="$1"
     SUBDIR="${GIT_URL/https:\/\//}"
 
     mkdir -pv "${SUBDIR}"
