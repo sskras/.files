@@ -83,7 +83,7 @@ clone:
 	:                                                            && \
 	: For the token based auth:                                  && \
 	:                                                            && \
-	git clone --bare https://github.com/sskras/.files            && \
+	git clone --bare https://github.com/sskras/.files.git        && \
 	:                                                            && \
 	: For the SSH-keys based auth:                               && \
 	:                                                            && \
