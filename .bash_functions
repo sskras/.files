@@ -26,6 +26,20 @@ home()  # Fn to manage home directory
     # Via: https://www.atlassian.com/git/tutorials/dotfiles#installing-git-lfs
 }
 
+
+gi ()  # Clones git repo into an appropriate subdir tree
+       # Eg: https://github.com/NetBSD/pkgsrc.git => ./github.com/NetBSD/pkgsrc.git
+{
+    #[ "$1" = "clone" ] || return 1
+
+    GIT_URL="$1"
+    SUBDIR="${GIT_URL/https:\/\//}"
+
+    mcd "${SUBDIR}"
+    git clone "${GIT_URL}" .
+}
+
+
 log()
 {
     pushd "${DIR_SESSIONS}" || return 1
@@ -67,18 +81,6 @@ log()
     popd
 }
 
-
-gi ()  # Clones git repo into an appropriate subdir tree
-       # Eg: https://github.com/NetBSD/pkgsrc.git => ./github.com/NetBSD/pkgsrc.git
-{
-    #[ "$1" = "clone" ] || return 1
-
-    GIT_URL="$1"
-    SUBDIR="${GIT_URL/https:\/\//}"
-
-    mcd "${SUBDIR}"
-    git clone "${GIT_URL}" .
-}
 
 mcd ()  # Fn to make a directory & cd to it
 {
