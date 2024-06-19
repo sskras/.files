@@ -68,10 +68,9 @@ log()
 }
 
 
-gi ()
+gi ()  # Clones git repo into an appropriate subdir tree
+       # Eg: https://github.com/NetBSD/pkgsrc.git => ./github.com/NetBSD/pkgsrc.git
 {
-    # TODO: clone git into appropriate subdir tree
-    # Eg. https://github.com/NetBSD/pkgsrc => ./github.com/NetBSD/pkgsrc
     [ "$1" = "clone" ] || return 1
 
     GIT_URL="$2"
