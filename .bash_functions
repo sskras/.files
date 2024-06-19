@@ -40,7 +40,7 @@ gi ()  # Clones git repo into an appropriate subdir tree
 }
 
 
-log()
+log()  # Fn to record a shell session into the GNU script format
 {
     pushd "${DIR_SESSIONS}" || return 1
 
