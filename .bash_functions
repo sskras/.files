@@ -9,7 +9,7 @@ DIR_SESSIONS="${HOME}/debug/session-logs"
 
 
 home()  # Fn to manage home directory
-{
+(
     cd
     case "$1" in
         (uninstall)
@@ -25,7 +25,9 @@ home()  # Fn to manage home directory
             ;;
     esac
     # Via: https://www.atlassian.com/git/tutorials/dotfiles#installing-git-lfs
-}
+)
+# Spawn fn in a subshell (by using parentheses instead of curly braces).
+# Via: https://www.baeldung.com/linux/bash-functions-subprocesses#1-defining-the-function-body-within-a-subshell
 
 
 gi ()  # Clones git repo into an appropriate subdir tree
