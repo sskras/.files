@@ -78,5 +78,6 @@ gi ()
     SUBDIR="${GIT_URL/https:\/\//}"
 
     mkdir -pv "${SUBDIR}"
-    git clone "${GIT_URL}" "${SUBDIR}"
+    cd "${SUBDIR}"
+    git clone "${GIT_URL}" .
 }
