@@ -7,6 +7,7 @@ A = This Makefile present some milestone operations from lifecycle / during mana
 GIT_WORK_TREE   := ${HOME}#/tmp
 GIT_DIR         := ${GIT_WORK_TREE}/.files.git
 CONFLICT_STORE  := .config/unlicensed
+# Try `. /etc/os-release 2>/dev/null && echo "$PRETTY_NAME"` before falling back to `uname` ..:
 CONFLICT_OSDIR  := `uname -o | sed 's|/|-|'`-`uname -r | sed 's|/|-|g'`
               # Eg:
               #  - GNU-Linux-5.4.0
