@@ -7,33 +7,34 @@
 
 BEGIN \
 {
-    TRIGGER=ARGV[1]
-
     for (i = 1; i < ARGC; i++)
     {
         arg = ARGV[i]
+
+        # Make sure the argument isn't interpreted as an input file name during processing later:
         ARGV[i] = ""
+        # Via: https://stackoverflow.com/questions/12701934/awk-pass-arguments-argv-and-file-to-parse-in-the-same-command/12702053#12702053
 
         if (arg == "--caps")
         {
             CAPS = 1
         }
+        else if (START_PATTERN == "")
+        {
+            START_PATTERN = arg
+        }
     }
-
-    # Make sure the string isn't interpreted an input file name:
-    ARGV[1]=""
-    # Via: https://stackoverflow.com/questions/12701934/awk-pass-arguments-argv-and-file-to-parse-in-the-same-command/12702053#12702053
 }
 
-$0~TRIGGER \
+$0 ~ START_PATTERN \
 {
     GO=1
 
     # Index of the string being trimmed:
-    START_OF_TRIGGER = index($0, TRIGGER)
+    START_PATTERN_BEGINS = index($0, START_PATTERN)
 
     # Index of the letter following the string being trimmed:
-    TAIL_BEGINS = START_OF_TRIGGER + length(TRIGGER)
+    TAIL_BEGINS = START_PATTERN_BEGINS + length(START_PATTERN)
 
     if (CAPS)
     {
