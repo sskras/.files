@@ -23,10 +23,14 @@ BEGIN \
         {
             START_PATTERN = arg
         }
+        else if (STOP_PATTERN == "")
+        {
+            STOP_PATTERN = arg
+        }
     }
 }
 
-$0 ~ START_PATTERN \
+!GO && $0 ~ START_PATTERN \
 {
     GO=1
 
@@ -50,6 +54,12 @@ $0 ~ START_PATTERN \
     # Via: https://www.unix.com/unix-for-dummies-questions-and-answers/174978-awk-changing-first-char-small-upper.html#postcount302590311
 
     print ""
+}
+
+GO && STOP_PATTERN && $0 ~ STOP_PATTERN \
+{
+    # Found the optional stop pattern. Stop printing immediately:
+    exit
 }
 
 GO

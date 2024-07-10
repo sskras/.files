@@ -30,7 +30,7 @@ main () {
     # TODO: Maybe just use the current script.
 
     cd
-    cat README.asciidoc | .local/bin/tail-extract "After deployment is over, " --caps
+    cat README.asciidoc | .local/bin/tail-extract "After deployment is over, " --caps "^=="
 }
 
 error () {
