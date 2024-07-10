@@ -9,6 +9,8 @@ BEGIN \
 {
     for (i = 1; i < ARGC; i++)
     {
+       #print "ARGV["i"]: "ARGV[i]
+
         arg = ARGV[i]
 
         # Make sure the argument isn't interpreted as an input file name during processing later:
@@ -32,6 +34,10 @@ BEGIN \
             STOP_PATTERN = arg
         }
     }
+   #print "START_PATTERN: "START_PATTERN
+   #print "STOP_PATTERN: "STOP_PATTERN
+   #print "CAPS: "CAPS
+   #print "TRIM: "TRIM
 }
 
 !GO && $0 ~ START_PATTERN \
