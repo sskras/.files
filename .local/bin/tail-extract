@@ -9,6 +9,17 @@ BEGIN \
 {
     TRIGGER=ARGV[1]
 
+    for (i = 1; i < ARGC; i++)
+    {
+        arg = ARGV[i]
+        ARGV[i] = ""
+
+        if (arg == "--caps")
+        {
+            CAPS = 1
+        }
+    }
+
     # Make sure the string isn't interpreted an input file name:
     ARGV[1]=""
     # Via: https://stackoverflow.com/questions/12701934/awk-pass-arguments-argv-and-file-to-parse-in-the-same-command/12702053#12702053
@@ -24,9 +35,13 @@ $0~TRIGGER \
     # Index of the letter following the string being trimmed:
     TAIL_BEGINS = START_OF_TRIGGER + length(TRIGGER)
 
+    if (CAPS)
+    {
     # Capitalize the now leading letter:
     LEAD = toupper(substr($0, TAIL_BEGINS, 1))
     TAIL_BEGINS++
+    }
+
     TAIL = substr($0, TAIL_BEGINS)
 
     $0 = LEAD TAIL
