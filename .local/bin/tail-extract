@@ -40,6 +40,8 @@ BEGIN \
    #print "TRIM: "TRIM
 }
 
+# TODO: Do we need to print nothing if no arguments were given (ie. with no START_PATTERN) ?
+
 !GO && $0 ~ START_PATTERN \
 {
     GO=1
