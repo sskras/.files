@@ -25,9 +25,11 @@ $0~TRIGGER \
     TAIL_BEGINS = START_OF_TRIGGER + length(TRIGGER)
 
     # Capitalize the now leading letter:
-    $0 = \
-        toupper(substr($0, TAIL_BEGINS, 1)) \
-        substr($0, TAIL_BEGINS)
+    LEAD = toupper(substr($0, TAIL_BEGINS, 1))
+    TAIL_BEGINS++
+    TAIL = substr($0, TAIL_BEGINS)
+
+    $0 = LEAD TAIL
 
     # Via: https://www.unix.com/unix-for-dummies-questions-and-answers/174978-awk-changing-first-char-small-upper.html#postcount302590311
 
