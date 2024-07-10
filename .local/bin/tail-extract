@@ -24,15 +24,13 @@ $0~TRIGGER \
     # Index of the letter following the string being trimmed:
     AFTER_TRIGGER = START_OF_TRIGGER + length(TRIGGER)
 
-    # Capitalize the letter before trimming the string:
+    # Capitalize the now leading letter:
     $0 = \
-        substr($0, 1, START_OF_TRIGGER - 1) \
         toupper(substr($0, AFTER_TRIGGER, 1)) \
         substr($0, AFTER_TRIGGER + 1)
     # Via: https://www.unix.com/unix-for-dummies-questions-and-answers/174978-awk-changing-first-char-small-upper.html#postcount302590311
 
     print ""
-    sub(TRIGGER, "")
 }
 
 GO
