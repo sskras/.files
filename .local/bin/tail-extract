@@ -37,9 +37,9 @@ $0~TRIGGER \
 
     if (CAPS)
     {
-    # Capitalize the now leading letter:
-    LEAD = toupper(substr($0, TAIL_BEGINS, 1))
-    TAIL_BEGINS++
+        # Capitalize the now leading letter:
+        LEAD = toupper(substr($0, TAIL_BEGINS, 1))
+        TAIL_BEGINS++
     }
 
     TAIL = substr($0, TAIL_BEGINS)
@@ -56,4 +56,3 @@ GO
 
 # TODO:
 # - Make trimming optional.
-# - Make capitalization optional.
