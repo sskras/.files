@@ -19,6 +19,10 @@ BEGIN \
         {
             CAPS = 1
         }
+        else if (arg == "--trim")
+        {
+            TRIM = 1
+        }
         else if (START_PATTERN == "")
         {
             START_PATTERN = arg
@@ -40,6 +44,8 @@ BEGIN \
     # Index of the letter following the string being trimmed:
     TAIL_BEGINS = START_PATTERN_BEGINS + length(START_PATTERN)
 
+    if (TRIM)
+    {
     if (CAPS)
     {
         # Capitalize the now leading letter:
@@ -50,6 +56,7 @@ BEGIN \
     TAIL = substr($0, TAIL_BEGINS)
 
     $0 = LEAD TAIL
+    }
 
     # Via: https://www.unix.com/unix-for-dummies-questions-and-answers/174978-awk-changing-first-char-small-upper.html#postcount302590311
 
