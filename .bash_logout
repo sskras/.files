@@ -6,4 +6,4 @@ echo "Executing ${HOME}/.bash_logout" >&2
 # Executed when exiting Bash login sessions.
 
 # TODO: Just use the Ubuntu version for now:
-. ".config/unlicensed/.bash_logout.Ubuntu-20.04.2-LTS-(Focal-Fossa)"
+. "${HOME}/.config/unlicensed/.bash_logout.Ubuntu-20.04.2-LTS-(Focal-Fossa)"
