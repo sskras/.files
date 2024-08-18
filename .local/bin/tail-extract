@@ -46,11 +46,14 @@ BEGIN \
 {
     GO=1
 
-    # Index of the string being trimmed:
+    # Index of the start of match pattern, potentially to be included in trimming:
     START_PATTERN_BEGINS = index($0, START_PATTERN)
 
-    # Index of the letter following the string being trimmed:
+    # Index of the character (the tail) following the pattern:
     TAIL_BEGINS = START_PATTERN_BEGINS + length(START_PATTERN)
+
+   #print "START_PATTERN_BEGINS: "START_PATTERN_BEGINS
+   #print "TAIL_BEGINS: "TAIL_BEGINS
 
     if (TRIM)
     {
