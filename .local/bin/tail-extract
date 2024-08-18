@@ -55,6 +55,8 @@ BEGIN \
    #print "START_PATTERN_BEGINS: "START_PATTERN_BEGINS
    #print "TAIL_BEGINS: "TAIL_BEGINS
 
+    # TODO: Split CAPS from TRIM processing (move TRIM above, but below START_PATTERN_BEGINS, to calculate different LEAD and TAIL_BEGINS)
+
     if (TRIM)
     {
         if (CAPS)
