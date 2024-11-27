@@ -7,14 +7,13 @@
 
 DEPS="git make rsync"
 
-# Protect the script from truncating in transit:
-
 # 0, Fail early:
 set -e
 
+# 10. Protect the script from truncating in transit:
 main () {
 
-    # 1, Detect if some tools are missing, e.g. git, make.
+    # 20, Detect if some tools are missing, e.g. git, make.
     for CMD in ${DEPS}; do
         if ! command -v ${CMD} >/dev/null; then
             MISSING="${MISSING} ${CMD}"
@@ -22,13 +21,15 @@ main () {
         fi
     done
 
+    # 30. Report the lack, if any:
     [ -n "${MISSING}" ] && error
 
-    # 2, Deploy the repo, checkout the files:
+    # 40. Deploy the repo, checkout the files:
     curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
     # TODO: Convert `.local/Makefile` into Bash functions, so we have one depedency less.
     # TODO: Maybe just use the current script.
 
+    # 50. Print the summarizing instructions:
     cd
     cat README.asciidoc | .local/bin/tail-extract "After deployment is over, " --trim --caps "^=="
 }
