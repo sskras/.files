@@ -25,13 +25,19 @@ main () {
     [ -n "${MISSING}" ] && error
 
     # 40. Deploy the repo, checkout the files:
-    curl -s https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
+    fetch https://raw.githubusercontent.com/sskras/.files/main/.local/Makefile | make -f- install
     # TODO: Convert `.local/Makefile` into Bash functions, so we have one depedency less.
     # TODO: Maybe just use the current script.
 
     # 50. Print the summarizing instructions:
     cd
     cat README.asciidoc | .local/bin/tail-extract "After deployment is over, " --trim --caps "^=="
+}
+
+fetch () {
+    curl -sS     "${@}" || \
+    wget -nv -O- "${@}" || \
+    return 177
 }
 
 error () {
