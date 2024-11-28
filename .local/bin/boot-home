@@ -13,6 +13,9 @@ set -e
 # 10. Protect the script from truncating in transit:
 main () {
 
+    # 15. If no fetchers available, demand `curl` then (the preffered tool):
+    fetch -V 1>/dev/null 2>&1 || DEPS="${DEPS} curl"
+
     # 20, Detect if some tools are missing, e.g. git, make.
     for CMD in ${DEPS}; do
         if ! command -v ${CMD} >/dev/null; then
@@ -48,6 +51,8 @@ error () {
 	Needed executables are missing:
 
 	 ${MISSING}
+
+	(if 'curl' is mentioned, you can use 'wget' instead)
 
 	Please install them before retrying, eg:
 
