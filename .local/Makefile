@@ -75,7 +75,7 @@ init-push:
 	mv -v .git-credentials .config/git/credentials               && \
 	exit                                                            \
 
-install: clone pop init-push
+install: clone pop init-push submodules
 	@
 
 clone:
@@ -154,3 +154,12 @@ uninstall:
 	rm -rf ${GIT_DIR}                                            && \
 	exit                                                            \
 
+
+submodules:
+	@ \
+	echo                                                         && \
+	echo TODO: init ~/.local/bin and maybe ~/.ssh via            && \
+	echo TODO: https://github.com/sskras/.local-bin$#deployment  && \
+	echo                                                         && \
+	exit                                                            \
+	
