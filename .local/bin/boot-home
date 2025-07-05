@@ -63,13 +63,13 @@ error () {
 	  cd /tmp
 	  curl -O https://raw.githubusercontent.com/saukrs/linux-tools/main/steps-01-bootstrap
 	  cat steps-01-bootstrap
-	  su -c sh steps-01-bootstrap
+	  su -c sh steps-01-bootstrap git make
 	  rm -v steps-01-bootstrap
 	  cd -
 
 	Or just blindly pipe it from the repo to the shell:
 
-	  su -c 'curl -L t.co/kEdmHSC4ZK | sh'
+	  su -c 'curl -L t.co/kEdmHSC4ZK | sh -s git make'
 	-------------------------------------------------------------------------------------------
     exit $RET
 }
