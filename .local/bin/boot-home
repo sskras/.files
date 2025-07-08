@@ -61,7 +61,7 @@ error () {
 	Or use a dedicated script:
 
 	  cd /tmp
-	  curl -O https://raw.githubusercontent.com/saukrs/linux-tools/main/steps-01-bootstrap
+	  curl -O https://raw.githubusercontent.com/saukrs/linux-steps/main/steps-01-bootstrap
 	  cat steps-01-bootstrap
 	  su -c sh steps-01-bootstrap git make
 	  rm -v steps-01-bootstrap
@@ -69,7 +69,7 @@ error () {
 
 	Or just blindly pipe it from the repo to the shell:
 
-	  su -c 'curl -L t.co/kEdmHSC4ZK | sh -s git make'
+	  su -c 'curl -L t.co/UIgzvkqDI4 | sh -s git make'
 	-------------------------------------------------------------------------------------------
     exit $RET
 }
