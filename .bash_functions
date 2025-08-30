@@ -26,7 +26,8 @@ home()  # Fn to manage home directory
     esac
     # Via: https://www.atlassian.com/git/tutorials/dotfiles#installing-git-lfs
 )
-# Spawn fn in a subshell (by using parentheses instead of curly braces).
+# Spawn fn in a subshell (by using parentheses instead of curly braces)
+# ... so we don't need to handle cding back in case of erroring out.
 # Via: https://www.baeldung.com/linux/bash-functions-subprocesses#1-defining-the-function-body-within-a-subshell
 
 
